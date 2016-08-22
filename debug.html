@@ -3,23 +3,24 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Debug Git</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script>
-		//fix these bugs! 
+		//fix these bugs!
 		//the number 1 keeps printing.  I want 0 ... 10
 		for (var i=0; i <= 10; i++){
-			console.log("I've said hello "+1+" times!");
+			console.log("I've said hello "+i+" times!");
 		}
 		//this alert just won't happen!
 		$(document).ready(function(){
-			$(button).click(function(){
+			$('button').on('click',function(){
 				alert('jQuery is in action!');
 			});
 		});
-		
-		//[hacker level] 
+
+		//[hacker level]
 		//make the initial button click create a new button and when this NEW button is clicked...
 		//have it alert the user "All bugs found"
-		
+
 	</script>
 </head>
 <body>

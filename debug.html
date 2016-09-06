@@ -3,17 +3,31 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Debug Git</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js" integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw=" crossorigin="anonymous"></script>
 	<script>
 		//fix these bugs! 
 		//the number 1 keeps printing.  I want 0 ... 10
 		for (var i=0; i <= 10; i++){
-			console.log("I've said hello "+1+" times!");
+			console.log("I've said hello "+i+" times!");
 		}
 		//this alert just won't happen!
 		$(document).ready(function(){
-			$(button).click(function(){
+			function addButton(){
 				alert('jQuery is in action!');
+				$('#div1').append('<button id="btn_1">New button</button>');
+			}
+			$('#btn').click(function(){
+				addButton();
 			});
+			function alertIt(){
+				alert('All bugs found');
+			}
+			
+			$(document).on('click','#btn_1',function(){
+				alertIt();
+			})
+
 		});
 		
 		//[hacker level] 
@@ -24,6 +38,6 @@
 </head>
 <body>
 	<h1>Git Debug</h1>
-	<button>Click</button>
+	<div id='div1'><button id="btn">Click</button></div>
 </body>
 </html>

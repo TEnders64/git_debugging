@@ -7,28 +7,14 @@
 	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js" integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw=" crossorigin="anonymous"></script>
 	<script>
 		//fix these bugs! 
-		//the number 1 keeps printing.  I want 0 ... 10
+		//I've said hello 1 times keeps printing!
 		for (var i=0; i <= 10; i++){
-			console.log("I've said hello "+i+" times!");
+			console.log("I've said hello 1 times!");
 		}
 		//this alert just won't happen!
-		$(document).ready(function(){
-			function addButton(){
-				alert('jQuery is in action!');
-				$('#div1').append('<button id="btn_1">New button</button>');
-			}
-			$('#btn').click(function(){
-				addButton();
-			});
-			function alertIt(){
-				alert('All bugs found');
-			}
-			
-			$(document).on('click','#btn_1',function(){
-				alertIt();
-			})
-
-		});
+		$('#btn').click(function(){
+			alert('jQuery is in action!');
+		}
 		
 		//[hacker level] 
 		//make the initial button click create a new button and when this NEW button is clicked...
